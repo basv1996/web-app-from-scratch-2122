@@ -15,7 +15,8 @@ function checkChecked(){
         console.log("check")
     } else {
         section.style.transform = "rotateY(0deg)"
-    console.log("nothing")
+        //frontCard.style.opacity = "1"
+        console.log("nothing")
     }
 }
 

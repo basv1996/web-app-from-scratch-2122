@@ -45,6 +45,7 @@ main .corner {
     box-shadow: 0px 2px 20px #ddd;
     cursor: pointer;
     transition: .3s ;
+    z-index: 99;
 }
 main .corner:hover {
 	border-top: 15px solid transparent;
@@ -54,28 +55,29 @@ main .corner:hover {
 	box-shadow: 0 2px 20px black;
 }
 
-.corner input[type="checkbox"] {
+main .corner input[type="checkbox"] {
 	position: absolute;
 	left: -15px;
 	top: -20px;
-	opacity: 0.3;
+	opacity: 0;
 	cursor: pointer;
 	width: 30px;
 	height: 40px;
 }
 
-.corner input[type="checkbox"]:checked section main article{
-transform: rotateY(180deg);
+main .corner label {
+	font-size: 0;
+	position: absolute;
 }
 
-/* .corner input[type="checkbox"]:hover  */
-
 main section {
-    position: relative;
-    /* width: 100%;
-  height: 100%; */
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.6s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	max-width: 90%;
+	width: 100%;
 }
 
 main section article {
@@ -90,8 +92,12 @@ main section article {
 	align-items: center;
 }
 
-/* main section article:first-of-type {
-	height: 100vh;
+/* .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 } */
 
 .personal {
@@ -116,21 +122,22 @@ main section article {
 
 .socialMedia ul {
     display: flex;
-    flex-direction: row;
 }
 
 .socialMedia ul li {
-    width: 100px;
-    height: 100px;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .socialMedia ul li img {
-    width: 100px;
-    height: 100px;
+	width: 50px;
+	height: 50px;
 }
 
 /* back of th card */
 main section article.back {
     transform: rotateY(180deg);
 }
-
