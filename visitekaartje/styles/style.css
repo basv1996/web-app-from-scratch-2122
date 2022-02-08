@@ -17,8 +17,8 @@ main {
     margin: 0 auto;
     width: 413px;
     height: 709px;
-    border: 1px solid black;
-}
+ }
+
 img {
     max-width: 100%;
 }
@@ -32,6 +32,7 @@ ul {
 main {
     position: relative;
     background-color:turquoise;
+	border-radius: 5px;
 }
 
 main .corner {
