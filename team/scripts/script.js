@@ -1,19 +1,35 @@
 getAndRenderData()
 // postAndRenderData()
 function getAndRenderData () {
-    //const getURL = 'https://tribe.api.fdnd.nl/v1/list'
-    const getURL = 'https://api.punkapi.com/v2/beers'
+    const getURL = 'https://tribe.api.fdnd.nl/v1/list'
+    // const getURL = 'https://api.punkapi.com/v2/beers'
     fetch(getURL).then(response => response.json())
     .then(response => {
-        console.log(response)
-        // response.data.forEach(member => {
-        //     document.body.insertAdjacentHTML('beforebegin',`<p>${member.teams[2]}</p>`)
-        // })
-        response.map(beer => {
-            document.body.insertAdjacentHTML('beforebegin', `<p>${beer.food_pairing}</p>`)
+        const team4 = response.data.filter(member => {
+            //return member.teams[0].teamId
+            //console.log(member.teams[0].teamId)
+            teamNumbers = member.teams[0].teamId
+            console.log(teamNumbers)   
+           teamNumbers = Array()
+              
         })
+
+
+
+        // console.log(response)
+        // response.data.map(member => {
+        //     console.log("member: ", member.teams[0].teamId)
+        //     document.body.insertAdjacentHTML('beforebegin',`<p>${member.teams}</p>`)
+        // })
+
+
+        // response.map(beer => {
+        //     document.body.insertAdjacentHTML('beforebegin', `<p>${beer.food_pairing}</p>`)
+        // })
     }).catch(error => document.body.insertAdjacentHTML('beforebegin', error))
 }
+
+
 // function postAndRenderData () {
 //     const postURL = 'https://tribe.api.fdnd.nl/v1/member'
 //     const options = {
