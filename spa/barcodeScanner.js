@@ -32,9 +32,9 @@ window.onload = () => {
               const newBarcode = barcode.rawValue; 
               list.appendChild(li);
 
-              const listLinks = document.getElementsByClassName("links");
+
+              const listLinks = document.getElementById("links");
               const liLinks = document.createElement("li");
-              
               const API_url = `https://world.openfoodfacts.org/api/v0/product/${newBarcode}.json`;
               const link = document.createElement("a");
               link.href = API_url;
