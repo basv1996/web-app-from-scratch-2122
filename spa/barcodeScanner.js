@@ -1,11 +1,8 @@
-
-
 window.onload = () => {
     detect();
   };
 
 
-  
   async function detect() {
     const barcodeDetector = new BarcodeDetector();
     const list = document.getElementById("barcode-list");
@@ -20,6 +17,7 @@ window.onload = () => {
   
     list.before(video);
   
+
     function render() {
       barcodeDetector
         .detect(video)
@@ -31,14 +29,32 @@ window.onload = () => {
               li.innerHTML = barcode.rawValue;
               const newBarcode = barcode.rawValue; 
               list.appendChild(li);
-
-
-              const listLinks = document.getElementById("links");
-              const liLinks = document.createElement("li");
-              const API_url = `https://world.openfoodfacts.org/api/v0/product/${newBarcode}.json`;
-              const link = document.createElement("a");
-              link.href = API_url;
-              listLinks.appendChild(liLinks).appendChild(link);
+              const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
+              fetch(getURL).then(response => response.json())
+              .then(response => {
+                  console.log(response.product)
+          
+                  const product = {
+                      name: response.product.product_name,
+                      brand: response.product.brand_owner,
+                      nutriscore: response.product.nutrient_levels.fat,
+                      img: response.product.image_front_url
+                  }
+          
+                  const markup = `
+           <div class="person">
+                  <img src=${product.img}>
+                  <h2>${product.name} </h2>
+              <h3>
+                  ${product.brand}
+              </h3>
+              <p class="location">${product.nutriscore}</p>
+           </div>
+          `;
+          
+          document.querySelector("main section:first-of-type").innerHTML = markup;    
+              })
+              .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
             }
           });
         })
@@ -47,26 +63,10 @@ window.onload = () => {
 
 // barcode getter
 
-// const barcode = li.innerHTML;
-// const API_url = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json` 
+// const barcode = "li.innerHTML";
 
-// // fetch
-// fetch(API_url)
-//   .then(results => results.json())
-//   .then(data => {
-//       console.log(data)
-//     //   document.querySelector('.links').insertAdjacentHTML('afterbegin',
-//     //     `<a href="${API_url}"> </a>`)
-//     }
-      
-// )
-//   .catch(error => console.log(error))
-
-  
     (function renderLoop() {
       requestAnimationFrame(renderLoop);
       render();
     })();
   }
-  
-  
