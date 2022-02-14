@@ -20,8 +20,21 @@ if (!('BarcodeDetector' in window)) {
 fetch(API_url)
   .then(results => results.json())
   .then(data => {
-      console.log(data)
-    })
+      console.log(data)}
+)
   .catch(error => console.log(error))
+
+
+
+//   barcode detector
+
+var barcodeDetector = new BarcodeDetector();
+barcodeDetector.detect(image)
+  .then(barcodes => {
+    barcodes.forEach(barcode => console.log(barcodes.rawValue))
+  })
+  .catch((e) => {
+    console.error("Boo, BarcodeDetection failed: " + e);
+  });
 
   
