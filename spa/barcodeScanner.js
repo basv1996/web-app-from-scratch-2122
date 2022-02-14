@@ -39,20 +39,20 @@ window.onload = () => {
 
 // barcode getter
 
-const barcode = li.innerHTML;
-const API_url = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json` 
+// const barcode = li.innerHTML;
+// const API_url = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json` 
 
-// fetch
-fetch(API_url)
-  .then(results => results.json())
-  .then(data => {
-      console.log(data)
-      document.querySelector('.links').insertAdjacentHTML('afterbegin',
-        `<a href="${API_url}"> </a>`)
-    }
+// // fetch
+// fetch(API_url)
+//   .then(results => results.json())
+//   .then(data => {
+//       console.log(data)
+//     //   document.querySelector('.links').insertAdjacentHTML('afterbegin',
+//     //     `<a href="${API_url}"> </a>`)
+//     }
       
-)
-  .catch(error => console.log(error))
+// )
+//   .catch(error => console.log(error))
 
   
     (function renderLoop() {
