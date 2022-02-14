@@ -27,12 +27,14 @@ window.onload = () => {
               itemsFound.push(barcode.rawValue);
               const li = document.createElement("li");
               li.innerHTML = barcode.rawValue;
+              const newBarcode = barcode.rawValue 
               list.appendChild(li);
             }
           });
         })
         .catch(console.error);
     }
+    console.log(newBarcode)
   
     (function renderLoop() {
       requestAnimationFrame(renderLoop);
