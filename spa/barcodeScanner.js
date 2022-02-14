@@ -3,6 +3,8 @@
 window.onload = () => {
     detect();
   };
+
+
   
   async function detect() {
     const barcodeDetector = new BarcodeDetector();
@@ -34,6 +36,23 @@ window.onload = () => {
         })
         .catch(console.error);
     }
+
+// barcode getter
+
+const barcode = li.innerHTML;
+const API_url = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json` 
+
+// fetch
+fetch(API_url)
+  .then(results => results.json())
+  .then(data => {
+      console.log(data)
+      document.querySelector('.links').insertAdjacentHTML('afterbegin',
+        `<a href="${API_url}"> </a>`)
+    }
+      
+)
+  .catch(error => console.log(error))
 
   
     (function renderLoop() {
