@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+a {
+    text-decoration: none;
+    color: red;
+}
 body header {
     background-color: yellowgreen;
     height: 5em;
@@ -63,7 +68,7 @@ video::after {
     max-width: 100%;
 }
 
-.scanOtherCode, .backToOriginal {
+.backToOriginal {
     border: 4px dotted blue;
     padding: 1em;
     cursor: pointer;

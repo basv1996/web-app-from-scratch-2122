@@ -67,7 +67,7 @@ window.onload = () => {
               <p>Total Carbohybrates per 100gr:  ${product.carbsPer100gram}</p>
               <p class="toTheRight">sugars: ${product.sugarspercarbs}</p>
               <p>Fat per 100gr:  ${product.fatPer100gram}</p> 
-              <p class="scanOtherCode"> Scan another code</p>      
+              <p class="backToOriginal"> Scan another code</p>      
            </div>
           
           `;
