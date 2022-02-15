@@ -46,9 +46,7 @@ window.onload = () => {
                       sugarspercarbs: response.product.nutriments['sugars_100g'],
                       fatPer100gram: response.product.nutriments['fat_100g'],
                       proteinsPer100gram: response.product.nutriments['proteins_100g'],
-                      sugarsPer100gram: response.product.nutriments['sugars_100g'],
-
-                     
+                                          
                       nutriments: response.product.nutriments,
                       img: response.product.image_front_url
                   }
@@ -59,16 +57,11 @@ window.onload = () => {
                   <h2>
                     <b>Name:</b> ${product.name} 
                   </h2>
-              <h3>
-                  <b>Brand:</b> ${product.brand}
-              </h3>
               <h3> Nutriments: </h3>
               <p>kcal per 100gr:  ${product.kcal100gram}</p>
               <p>Total Carbohybrates per 100gr:  ${product.carbsPer100gram}</p>
               <p class="toTheRight">sugars: ${product.sugarspercarbs}</p>
-              <p>Fat per 100gr:  ${product.fatPer100gram}</p>
-              <p>Sugar per 100gr:  ${product.sugarsPer100gram}</p>
-           
+              <p>Fat per 100gr:  ${product.fatPer100gram}</p>       
              
            </div>
           `;
