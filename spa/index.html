@@ -12,19 +12,25 @@
         <h1>Healthy Checker</h1>
     </header>
     <main>
-        <section>
+        <section class="choseYourMethod">
             <article class="scanCode">
                 <p>Scan Barcode</p>
             </article>
-            <article> 
+            <article class="fillInYourself"> 
                 <p>Fill In yourself
                     </p>
                 </article>
         </section>
-        <section>
+        <section class="hidden barCodeScannerSection">
             <ul id="barcode-list"></ul>
             <!-- <p>Hieronder komt de url</p> -->
             <ul id="links"></ul>
+        </section>
+        <section class="hidden fillInYourselfSection">
+            <form>
+                <label>Search product by barcode</label>
+                <input class="inputSearch" type="text" placeholder="9016209">
+            </form>
         </section>
     </main>
     

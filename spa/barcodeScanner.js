@@ -3,7 +3,10 @@ window.onload = () => {
   };
 
   const barcodeBlock = document.querySelector(".scanCode")
-  const firstSection = document.querySelector("main section:nth-of-type(1)")
+  const fillInyourselfChose = document.querySelector(".fillInYourself")
+  const choseYourMethod = document.querySelector(".choseYourMethod")
+  const barCodeScannerSection = document.querySelector(".barCodeScannerSection")
+  const fillInYourselfSection = document.querySelector(".fillInYourselfSection")
   const scanOtherBar = document.querySelector(".scanOtherCode")
 
 
@@ -90,13 +93,16 @@ window.onload = () => {
     })();
   }
 
-  console.log(barcodeBlock)
-  console.log(firstSection)
-
   barcodeBlock.addEventListener("click", () => {
-    firstSection.classList.add("hidden")
+    console.log("hello there")
+    choseYourMethod.classList.toggle("hidden")
+    fillInYourselfSection.classList.toggle("hidden")
+    barCodeScannerSection.classList.toggle("hidden")
   })
 
   scanOtherBar.addEventListener("click", () => {
-    window.location.reload()
+    console.log("hello there 2")
+    choseYourMethod.classList.toggle("hidden")
+    fillInYourselfSection.classList.toggle("hidden")
+    barCodeScannerSection.classList.toggle("hidden")
   })
