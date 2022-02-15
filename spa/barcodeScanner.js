@@ -94,7 +94,7 @@ window.onload = () => {
   barcodeBlock.addEventListener("click", () => {
     console.log("hello there")
     choseYourMethod.classList.toggle("hidden")
-    fillInYourselfSection.classList.toggle("hidden")
+    // fillInYourselfSection.classList.toggle("hidden")
     barCodeScannerSection.classList.toggle("hidden")
   })
 
@@ -106,6 +106,12 @@ window.onload = () => {
   })
 
   backToOrigin.addEventListener("click", () => {
+    choseYourMethod.classList.toggle("hidden")
+    fillInYourselfSection.classList.toggle("hidden")
+    // barCodeScannerSection.classList.toggle("hidden")
+  })
+
+  scanOtherBar.addEventListener("click", () => {
     choseYourMethod.classList.toggle("hidden")
     fillInYourselfSection.classList.toggle("hidden")
     // barCodeScannerSection.classList.toggle("hidden")
