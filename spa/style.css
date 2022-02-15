@@ -2,9 +2,37 @@
     margin: 0;
     padding: 0;
 }
-main section{
-    max-width: 80%;
-    margin: 0 auto;
+body header {
+    background-color: yellowgreen;
+    height: 5em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body header h1 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #fff;
+}
+
+main section {
+	background-color: #a4fcbc;
+	height: calc(100vh - 5em);
+	margin: 0 auto;
+}
+
+main section:first-child{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main section:first-child article {
+    box-shadow: 5px 5px 10px #000;
+    padding: 3em;
+    background-color: yellow;
+    border: 5px dotted red;
 }
 
 video {
