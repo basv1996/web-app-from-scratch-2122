@@ -93,9 +93,9 @@ window.onload = () => {
   console.log(barcodeBlock)
   console.log(firstSection)
   barcodeBlock.addEventListener("click", () => {
-    firstSection.style.display = "none"
+    firstSection.style.opacity = "0"
   })
 
   scanOtherBar.addEventListener("click", () => {
-    firstSection.style.display = "inline"
+    firstSection.style.opacity = "1"
   })
