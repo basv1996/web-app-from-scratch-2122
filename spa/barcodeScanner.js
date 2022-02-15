@@ -41,8 +41,7 @@ window.onload = () => {
                       nutriscore_fat: response.product.nutrient_levels.fat,
                       nutriscore_salt: response.product.nutrient_levels.salt,
                       nutriscore_sugars: response.product.nutrient_levels.sugars,
-                      //nutrient_kcal100gram: response.product.nutriments[energy-kcal_100gr],
-                      // <p>kcal per 100gr: : ${product.nutrient_kcal100gram}</p>
+                      nutrient_kcal100gram: response.product.nutriments['energy-kcal_100gr'],
                       img: response.product.image_front_url
                   }
           
@@ -56,6 +55,7 @@ window.onload = () => {
               <p>fat: ${product.nutriscore_fat}</p>
               <p>salt: ${product.nutriscore_salt}</p>
               <p>sugars: ${product.nutriscore}</p>
+              <p>kcal per 100gr: : ${product.nutrient_kcal100gram}</p>
              
            </div>
           `;
