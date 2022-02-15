@@ -98,5 +98,5 @@ window.onload = () => {
   })
 
   scanOtherBar.addEventListener("click", () => {
-    firstSection.className= ""
+    window.location.reload()
   })
