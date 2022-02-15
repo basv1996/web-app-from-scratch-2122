@@ -9,6 +9,10 @@ window.onload = () => {
   const fillInYourselfSection = document.querySelector(".fillInYourselfSection")
   const scanOtherBar = document.querySelector(".scanOtherCode")
   const backToOrigin = document.querySelector(".backToOriginal")
+  const searchBtn = document.querySelector("form input[type=submit]")
+  const form = document.querySelector("form")
+
+  console.log(form)
 
 
   async function detect() {
@@ -26,7 +30,7 @@ window.onload = () => {
     list.before(video);
   
 
-    function render() {
+    function render(userInput) {
       barcodeDetector
         .detect(video)
         .then((barcodes) => {
@@ -91,6 +95,14 @@ window.onload = () => {
     })();
   }
 
+  function getInputValue(event) {
+    //debugger;
+    event.preventDefault();
+    const userInput = document.querySelector(".inputSearch").value;  
+    console.log(userInput);
+    return userInput;
+  }
+
   barcodeBlock.addEventListener("click", () => {
     console.log("hello there")
     choseYourMethod.classList.toggle("hidden")
@@ -111,8 +123,10 @@ window.onload = () => {
     // barCodeScannerSection.classList.toggle("hidden")
   })
 
-  scanOtherBar.addEventListener("click", () => {
-    choseYourMethod.classList.toggle("hidden")
-    fillInYourselfSection.classList.toggle("hidden")
-    // barCodeScannerSection.classList.toggle("hidden")
-  })
+  // scanOtherBar.addEventListener("click", () => {
+  //   choseYourMethod.classList.toggle("hidden")
+  //   fillInYourselfSection.classList.toggle("hidden")
+  //   // barCodeScannerSection.classList.toggle("hidden")
+  // })
+
+form.addEventListener("submit", getInputValue)
