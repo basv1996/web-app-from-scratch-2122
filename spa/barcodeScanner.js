@@ -30,6 +30,7 @@ window.onload = () => {
               const newBarcode = barcode.rawValue; 
               list.appendChild(li);
               const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
+              
               fetch(getURL).then(response => response.json())
               .then(response => {
                   console.log(response.product)
@@ -37,7 +38,10 @@ window.onload = () => {
                   const product = {
                       name: response.product.product_name,
                       brand: response.product.brand_owner,
-                      nutriscore: response.product.nutrient_levels.fat,
+                      nutriscore_fat: response.product.nutrient_levels.fat,
+                      nutriscore_salt: response.product.nutrient_levels.salt,
+                      nutriscore_sugars: response.product.nutrient_levels.sugars,
+                      nutrient_kcal100gram: response.product.nutriments[energy-kcal_100gr],
                       img: response.product.image_front_url
                   }
           
@@ -48,7 +52,10 @@ window.onload = () => {
               <h3>
                   ${product.brand}
               </h3>
-              <p class="location">${product.nutriscore}</p>
+              <p>fat: ${product.nutriscore_fat}</p>
+              <p>salt: ${product.nutriscore_salt}</p>
+              <p>sugars: ${product.nutriscore}</p>
+              <p>kcal per 100gr: : ${product.nutrient_kcal100gram}</p>
            </div>
           `;
           
