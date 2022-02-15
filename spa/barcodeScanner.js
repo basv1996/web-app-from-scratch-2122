@@ -38,10 +38,15 @@ window.onload = () => {
                   const product = {
                       name: response.product.product_name,
                       brand: response.product.brand_owner,
-                      nutriscore_fat: response.product.nutrient_levels.fat,
-                      nutriscore_salt: response.product.nutrient_levels.salt,
-                      nutriscore_sugars: response.product.nutrient_levels.sugars,
-                      nutrient_kcal100gram: response.product.nutriments['energy-kcal_100gr'],
+                      // nutriscore_fat: response.product.nutrient_levels.fat,
+                      // nutriscore_salt: response.product.nutrient_levels.salt,
+                      // nutriscore_sugars: response.product.nutrient_levels.sugars,
+                      kcal100gram: response.product.nutriments['energy-kcal_100g'],
+                      carbsPer100gram: response.product.nutriments['carbohydrates_100g'],
+                      fatPer100gram: response.product.nutriments['fat_100g'],
+                      proteinsPer100gram: response.product.nutriments['proteins_100g'],
+                      sugarsPer100gram: response.product.nutriments['sugars_100g'],
+                     
                       nutriments: response.product.nutriments,
                       img: response.product.image_front_url
                   }
@@ -49,15 +54,18 @@ window.onload = () => {
                   const markup = `
            <div class="person">
                   <img src=${product.img}>
-                  <h2>${product.name} </h2>
+                  <h2>
+                    <b>Name:</b> ${product.name} 
+                  </h2>
               <h3>
-                  ${product.brand}
+                  <b>Brand:</b> ${product.brand}
               </h3>
-              <p>fat: ${product.nutriscore_fat}</p>
-              <p>salt: ${product.nutriscore_salt}</p>
-              <p>sugars: ${product.nutriscore}</p>
-              <p>kcal per 100gr:  ${product.nutrient_kcal100gram}</p>
-              <p>alle nutriments: ${product.nutriments}</p>
+              <h3> Nutriments: </h3>
+              <p>kcal per 100gr:  ${product.kcal100gram}</p>
+              <p>Carbs per 100gr:  ${product.carbsPer100gram}</p>
+              <p>Fat per 100gr:  ${product.fatPer100gram}</p>
+              <p>Sugar per 100gr:  ${product.sugarsPer100gram}</p>
+           
              
            </div>
           `;
