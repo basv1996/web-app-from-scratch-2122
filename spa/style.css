@@ -44,6 +44,12 @@ video {
     height: 300px
 }
 
+video::after {
+    content: 'img/barcode.png';
+    width: 100vw;
+    height: 100%;
+}
+
 .toTheRight{
     margin-left: 1em;
 }
@@ -57,7 +63,7 @@ video {
     max-width: 100%;
 }
 
-.scanOtherCode {
+.scanOtherCode, .backToOriginal {
     border: 4px dotted blue;
     padding: 1em;
     cursor: pointer;
@@ -68,3 +74,13 @@ video {
     display: none!important;
 }
 
+.fillInYourselfSection form {
+	display: flex;
+	flex-direction: column;
+	max-width: 80vw;
+	margin: 0 auto;
+}
+
+.fillInYourselfSection form > * {
+	margin: 1em 0;
+}

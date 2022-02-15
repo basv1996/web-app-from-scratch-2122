@@ -8,6 +8,7 @@ window.onload = () => {
   const barCodeScannerSection = document.querySelector(".barCodeScannerSection")
   const fillInYourselfSection = document.querySelector(".fillInYourselfSection")
   const scanOtherBar = document.querySelector(".scanOtherCode")
+  const backToOrigin = document.querySelector(".backToOriginal")
 
 
   async function detect() {
@@ -45,9 +46,6 @@ window.onload = () => {
                   const product = {
                       name: response.product.product_name,
                       brand: response.product.brand_owner,
-                      // nutriscore_fat: response.product.nutrient_levels.fat,
-                      // nutriscore_salt: response.product.nutrient_levels.salt,
-                      // nutriscore_sugars: response.product.nutrient_levels.sugars,
                       kcal100gram: response.product.nutriments['energy-kcal_100g'],
                       carbsPer100gram: response.product.nutriments['carbohydrates_100g'],
                       sugarspercarbs: response.product.nutriments['sugars_100g'],
@@ -100,9 +98,15 @@ window.onload = () => {
     barCodeScannerSection.classList.toggle("hidden")
   })
 
-  scanOtherBar.addEventListener("click", () => {
+  fillInyourselfChose.addEventListener("click", () => {
     console.log("hello there 2")
     choseYourMethod.classList.toggle("hidden")
     fillInYourselfSection.classList.toggle("hidden")
-    barCodeScannerSection.classList.toggle("hidden")
+    // barCodeScannerSection.classList.toggle("hidden")
+  })
+
+  backToOrigin.addEventListener("click", () => {
+    choseYourMethod.classList.toggle("hidden")
+    fillInYourselfSection.classList.toggle("hidden")
+    // barCodeScannerSection.classList.toggle("hidden")
   })
