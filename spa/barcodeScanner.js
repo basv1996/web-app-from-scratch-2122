@@ -97,5 +97,5 @@ window.onload = () => {
   })
 
   scanOtherBar.addEventListener("click", () => {
-    firstSection.style.display = "block"
+    firstSection.style.display = "inline"
   })
