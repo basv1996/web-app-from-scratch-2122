@@ -92,10 +92,11 @@ window.onload = () => {
 
   console.log(barcodeBlock)
   console.log(firstSection)
+
   barcodeBlock.addEventListener("click", () => {
-    firstSection.style.display = "none"
+    firstSection.classList.add("hidden")
   })
 
   scanOtherBar.addEventListener("click", () => {
-    firstSection.style.display = "inline"
+    firstSection.className= ""
   })
