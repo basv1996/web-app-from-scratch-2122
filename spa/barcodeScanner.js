@@ -2,6 +2,9 @@ window.onload = () => {
     detect();
   };
 
+  const barcodeBlock = document.querySelector(".scanCode")
+  const firstSection = document.querySelector("main section:nth-of-type(1)")
+
 
   async function detect() {
     const barcodeDetector = new BarcodeDetector();
@@ -84,3 +87,9 @@ window.onload = () => {
       render();
     })();
   }
+
+  console.log(barcodeBlock)
+  console.log(firstSection)
+  barcodeBlock.addEventListener("click", () => {
+    firstSection.style.display = "none"
+  })
