@@ -97,5 +97,5 @@ window.onload = () => {
   })
 
   scanOtherBar.addEventListener("click", () => {
-    firstSection.style.opacity = "1"
+    firstSection.style.opacity = "0"
   })
