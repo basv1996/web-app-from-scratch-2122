@@ -47,3 +47,14 @@ video {
 .toTheRight{
     margin-left: 1em;
 }
+
+.product {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.scanOtherCode {
+    border: 4px dotted blue;
+    padding: 1em;
+    cursor: pointer;
+}

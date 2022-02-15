@@ -4,6 +4,7 @@ window.onload = () => {
 
   const barcodeBlock = document.querySelector(".scanCode")
   const firstSection = document.querySelector("main section:nth-of-type(1)")
+  const scanOtherBar = document.querySelector(".scanOtherCode")
 
 
   async function detect() {
@@ -55,7 +56,7 @@ window.onload = () => {
                   }
           
                   const markup = `
-           <div class="person">
+           <div class="product">
                   <img src=${product.img}>
                   <h2>
                     <b>Name:</b> ${product.name} 
@@ -65,8 +66,8 @@ window.onload = () => {
               <p>Total Carbohybrates per 100gr:  ${product.carbsPer100gram}</p>
               <p class="toTheRight">sugars: ${product.sugarspercarbs}</p>
               <p>Fat per 100gr:  ${product.fatPer100gram}</p>       
-             
            </div>
+           <p class="scanOtherCode">Scan another code</p>
           `;
           
           document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
@@ -92,4 +93,8 @@ window.onload = () => {
   console.log(firstSection)
   barcodeBlock.addEventListener("click", () => {
     firstSection.style.display = "none"
+  })
+
+  scanOtherBar.addEventListener("click", () => {
+    firstSection.style.display = "block"
   })
