@@ -1,3 +1,56 @@
+# Web App From Scratch 2122
+
+## App Interface
+![Interface van de app]()
+
+### Link naar de app
+:globe_with_meridians: [Link naar live app](https://basv1996.github.io/web-app-from-scratch-2122/spa/) 
+
+
+## De Opdracht
+Design en bouw een Single Page App gebaseerd op een User Story.
+
+### De User Story / Concept
+
+Als foodie, wil ik tijdens het boodschappen doen een product kunnen scannen, 
+zodat ik meer informatie over het product kan lezen en een goede keuze kan maken of het bij mijn dieet past.
+
+### API (Healthy Food Checker)
+Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even snel als je boodschappen doet of als je in een restaurant zit, of als je thuis een uitgebreid en gedetailleerd dieet plan wil opstellen? Ontwerp een website waarmee je dit kan doen. De Healthy Food Checker is gebaseerd op Open Food Facts een productendatabase over voedsel door iedereen en voor iedereen. Je kan er heel veel informatie vinden, maar ook aan bijdragen producten toe te voegen en/of teksten te verbeteren.
+
+
+
+
+## 🗃 Data
+Welke data heb ike gebruikt?
+
+Ik heb een API gebruikt van de Healthy Food Checker. Hierin staan duizenden voedingsproducten met hun voedingswaardes.  
+![Ruwe dataset]()
+
+
+
+### Rubric
+
+[Rubric](h)
+
+### Credits
+-  [Minor Webdevelopment](https://github.com/cmda-tt/course-21-22) 
+- [Joost Faber](https://github.com/vijnv) :nerd_face:
+- [Koop Reynders](https://github.com/KoopReynders) :nerd_face:
+
+
+
+## 🗺️ License
+Author: [Bas Vugts](https://github.com/basv1996) , license by
+[MIT]()      
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
+
+
+
+
 # Web App From Scratch @cmda-minor-web 2021 - 2022
 
 In this course you will learn to build a web application without frameworks or unnecessary libraries, but with vanilla HTML, CSS & JavaScript as much as possible. The end result is a modular, single page web app (SPA). Data will be retrieved from an external API, manipulated and finally shown in the UI of the App. You will learn to apply interface principles when building and testing the interface. With the gained knowledge you will be able to build interactive prototypes, based on a user story and real data. Also you will gain a better understanding of how API's, frameworks and libraries work.
