@@ -40,7 +40,7 @@
 
       barcodeDetector
         .detect(video)
-        loadingElement.classList.add("hidden")
+        // loadingElement.classList.add("hidden")
         .then((barcodes) => {
           barcodes.forEach((barcode) => {
             if (!itemsFound.includes(barcode.rawValue)) {
@@ -49,7 +49,7 @@
               li.innerHTML = barcode.rawValue;
               const newBarcode = barcode.rawValue; 
               list.appendChild(li);
-               
+              const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
 
 
               skeletonSection.innerHTML = `
