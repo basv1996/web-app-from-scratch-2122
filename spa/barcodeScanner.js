@@ -25,23 +25,11 @@
   
     list.before(video);
 
-    // function checkIfScannerIsLoaded() {
-    //   const vidElement = docuemnt.querySelector("video")
-
-    //   if(!document.body.contains(vidElement)){
-    //       console.log("no video")
-    //   }
-    // }
-
-    // checkIfScannerIsLoaded()
-  
 
     function render() {
-      loadingElement.classList.add("hidden")
-
       barcodeDetector
         .detect(video)
-         
+        loadingElement.classList.add("hidden")
         .then((barcodes) => {
           barcodes.forEach((barcode) => {
            // loadingElement.classList.add("hidden")
