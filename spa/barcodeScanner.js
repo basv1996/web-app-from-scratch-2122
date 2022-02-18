@@ -47,7 +47,7 @@
               li.innerHTML = barcode.rawValue;
               const newBarcode = barcode.rawValue; 
               list.appendChild(li);
-              loadingElement.classList.add("hidden")
+              // loadingElement.classList.add("hidden")
 
 
               skeletonSection.innerHTML = `
