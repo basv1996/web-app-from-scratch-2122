@@ -67,10 +67,11 @@
               `
               
               fetch(getURL)
-              .then(response => {
-                return response.status >= 200 && response.status <= 299 ? response.json() : console.log('error')
-              })
-              .then(response => {
+              .then(response => response.json())
+              //   {
+              //   return response.status >= 200 && response.status <= 299 ? response.json() : console.log('error')
+              // })
+              // .then(response => {
                   console.log(response.product)
 
                   skeletonSection.innerHTML = ''
