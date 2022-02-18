@@ -31,7 +31,7 @@ window.onload = () => {
     function render() {
       barcodeDetector
         .detect(video)
-        .then((barcodes, userInput) => {
+        .then((barcodes) => {
           barcodes.forEach((barcode) => {
             if (!itemsFound.includes(barcode.rawValue)) {
               itemsFound.push(barcode.rawValue);
@@ -41,7 +41,10 @@ window.onload = () => {
               list.appendChild(li);
               const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
               
-              fetch(getURL).then(response => response.json())
+              fetch(getURL)
+              .then(response => {
+                return result.status >= 200 && result.status <= 299 ? result.json() : console.log('error')
+              })
               .then(response => {
                   console.log(response.product)
           
