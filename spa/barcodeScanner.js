@@ -1,7 +1,3 @@
-window.onload = () => {
-    detect();
-  };
-
   const barcodeBlock = document.querySelector(".scanCode")
   const fillInyourselfChose = document.querySelector(".fillInYourself")
   const choseYourMethod = document.querySelector(".choseYourMethod")
@@ -11,6 +7,8 @@ window.onload = () => {
   const backToOrigin = document.querySelector(".backToOriginal")
   const searchBtn = document.querySelector("form input[type=submit]")
   const form = document.querySelector("form")
+  const skeletonSection = document.querySelector("section:first-of-type")
+  const loadingElement = document.querySelector(".LoaderContainer")
 
 
   async function detect() {
@@ -26,6 +24,16 @@ window.onload = () => {
     video.autoplay = true;
   
     list.before(video);
+
+    // function checkIfScannerIsLoaded() {
+    //   const vidElement = docuemnt.querySelector("video")
+
+    //   if(!document.body.contains(vidElement)){
+    //       console.log("no video")
+    //   }
+    // }
+
+    // checkIfScannerIsLoaded()
   
 
     function render() {
@@ -39,7 +47,22 @@ window.onload = () => {
               li.innerHTML = barcode.rawValue;
               const newBarcode = barcode.rawValue; 
               list.appendChild(li);
-              const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode+ '.json'
+              loadingElement.hidden = true;
+
+
+              skeletonSection.innerHTML = `
+              <section>
+              <svg width='100%' height='90vh' class="skeletor">
+                           <rect width='100%' height='30vh' />
+                           <rect transform='translate(20, 375)' width='30%' height='2em' />
+                           <rect transform='translate(20, 440)' width='30%' height='1.5em' />
+                           <rect transform='translate(20, 470)' width='25%' height='1em' />
+                           <rect transform='translate(20, 490)' width='25%' height='1em' />
+                           <rect transform='translate(20, 510)' width='25%' height='1em' />
+                           <rect transform='translate(20, 530)' width='25%' height='1em' />
+              </svg>
+              </section>
+              `
               
               fetch(getURL)
               .then(response => {
@@ -47,6 +70,8 @@ window.onload = () => {
               })
               .then(response => {
                   console.log(response.product)
+
+                  skeletonSection.innerHTML = ''
           
                   const product = {
                       name: response.product.product_name,
@@ -62,20 +87,19 @@ window.onload = () => {
                   }
           
                   const markup = `
-           <div class="product">
-                  <img src=${product.img}>
-                  <h2>
-                    <b>Name:</b> ${product.name} 
-                  </h2>
-              <h3> Nutriments: </h3>
-              <p>kcal per 100gr:  ${product.kcal100gram}</p>
-              <p>Total Carbohybrates per 100gr:  ${product.carbsPer100gram}</p>
-              <p class="toTheRight">sugars: ${product.sugarspercarbs}</p>
-              <p>Fat per 100gr:  ${product.fatPer100gram}</p> 
-              <p class="backToOriginal"><a href=".">Scan another code</a></p>      
-           </div>
-          
-          `;
+                    <div class="product">
+                      <img src=${product.img}>
+                        <h2>
+                           <b>Name:</b> ${product.name} 
+                         </h2>
+                          <h3> Nutriments: </h3>
+                            <p>kcal per 100gr:  ${product.kcal100gram}</p>
+                            <p>Total Carbohybrates per 100gr:  ${product.carbsPer100gram}</p>
+                            <p class="toTheRight">sugars: ${product.sugarspercarbs}</p>
+                            <p>Fat per 100gr:  ${product.fatPer100gram}</p> 
+                            <p class="backToOriginal"><a href=".">Scan another code</a></p>      
+                      </div>
+                  `;
           
           document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
               })
@@ -91,6 +115,7 @@ window.onload = () => {
     (function renderLoop() {
       requestAnimationFrame(renderLoop);
       render();
+      // checkIfScannerIsLoaded()
     })();
   }
 
@@ -103,6 +128,7 @@ window.onload = () => {
   }
 
   barcodeBlock.addEventListener("click", () => {
+    detect();
     choseYourMethod.classList.toggle("hidden")
     // fillInYourselfSection.classList.toggle("hidden")
     barCodeScannerSection.classList.toggle("hidden")
@@ -119,11 +145,5 @@ window.onload = () => {
     fillInYourselfSection.classList.toggle("hidden")
     // barCodeScannerSection.classList.toggle("hidden")
   })
-
-  // scanOtherBar.addEventListener("click", () => {
-  //   choseYourMethod.classList.toggle("hidden")
-  //   fillInYourselfSection.classList.toggle("hidden")
-  //   // barCodeScannerSection.classList.toggle("hidden")
-  // })
 
 form.addEventListener("submit", getInputValue)

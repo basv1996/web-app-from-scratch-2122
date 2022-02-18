@@ -89,3 +89,27 @@ video::after {
 .fillInYourselfSection form > * {
 	margin: 1em 0;
 }
+
+.LoaderContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	grid-gap: 1em;
+}
+
+.loader {
+    width: 150px;
+    height: 150px;
+    border: 15px solid lightblue;
+    border-top: 15px solid blue;
+    border-radius: 50%;
+    animation: draaien 2s linear infinite;
+}
+
+
+@keyframes draaien {
+    to {
+        transform: rotate(360deg);
+    }
+} 
