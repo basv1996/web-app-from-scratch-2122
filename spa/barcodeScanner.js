@@ -68,7 +68,7 @@
               
               fetch(getURL)
               .then(response => {
-                return result.status >= 200 && result.status <= 299 ? result.json() : console.log('error')
+                return response.status >= 200 && response.status <= 299 ? response.json() : console.log('error')
               })
               .then(response => {
                   console.log(response.product)
