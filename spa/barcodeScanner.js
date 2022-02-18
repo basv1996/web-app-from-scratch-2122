@@ -37,8 +37,10 @@
   
 
     function render() {
+
       barcodeDetector
         .detect(video)
+        loadingElement.classList.add("hidden")
         .then((barcodes) => {
           barcodes.forEach((barcode) => {
             if (!itemsFound.includes(barcode.rawValue)) {
@@ -47,7 +49,7 @@
               li.innerHTML = barcode.rawValue;
               const newBarcode = barcode.rawValue; 
               list.appendChild(li);
-              // loadingElement.classList.add("hidden")
+               
 
 
               skeletonSection.innerHTML = `
