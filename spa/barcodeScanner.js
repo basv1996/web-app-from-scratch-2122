@@ -32,7 +32,7 @@
         //loadingElement.classList.add("hidden")
         .then((barcodes) => {
           barcodes.forEach((barcode) => {
-           // loadingElement.classList.add("hidden")
+           loadingElement.classList.add("hidden")
             if (!itemsFound.includes(barcode.rawValue)) {
               itemsFound.push(barcode.rawValue);
               const li = document.createElement("li");
