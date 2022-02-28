@@ -1,4 +1,4 @@
-import { getMyData } from "/scripts/modules/getData"
+import { getMyData } from "./modules/getData.js"
 
   const barcodeBlock = document.querySelector(".scanCode")
   const fillInyourselfChose = document.querySelector(".fillInYourself")
