@@ -1,5 +1,4 @@
 import { getMyData } from "./modules/getData.js"
-import { barCodeDetect } from "./modules/barcodeDetector.js"
 
   const barcodeBlock = document.querySelector(".scanCode")
   const fillInyourselfChose = document.querySelector(".fillInYourself")
@@ -15,20 +14,18 @@ import { barCodeDetect } from "./modules/barcodeDetector.js"
 
 
   async function detect() {
-
-    barCodeDetect()
-    // const barcodeDetector = new BarcodeDetector();
-    // const list = document.getElementById("barcode-list");
-    // let itemsFound = [];
-    // const mediaStream = await navigator.mediaDevices.getUserMedia({
-    //   video: { facingMode: "environment" }
-    // });
+    const barcodeDetector = new BarcodeDetector();
+    const list = document.getElementById("barcode-list");
+    let itemsFound = [];
+    const mediaStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "environment" }
+    });
   
-    // const video = document.createElement("video");
-    // video.srcObject = mediaStream;
-    // video.autoplay = true;
+    const video = document.createElement("video");
+    video.srcObject = mediaStream;
+    video.autoplay = true;
   
-    // list.before(video);
+    list.before(video);
 
 
     function render() {
@@ -85,20 +82,17 @@ import { barCodeDetect } from "./modules/barcodeDetector.js"
   barcodeBlock.addEventListener("click", () => {
     detect();
     choseYourMethod.classList.toggle("hidden")
-    // fillInYourselfSection.classList.toggle("hidden")
     barCodeScannerSection.classList.toggle("hidden")
   })
 
   fillInyourselfChose.addEventListener("click", () => {
     choseYourMethod.classList.toggle("hidden")
     fillInYourselfSection.classList.toggle("hidden")
-    // barCodeScannerSection.classList.toggle("hidden")
   })
 
   backToOrigin.addEventListener("click", () => {
     choseYourMethod.classList.toggle("hidden")
     fillInYourselfSection.classList.toggle("hidden")
-    // barCodeScannerSection.classList.toggle("hidden")
   })
 
 form.addEventListener("submit", getInputValue)

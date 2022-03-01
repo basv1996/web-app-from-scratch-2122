@@ -15,17 +15,18 @@
         <h1><a href=".">Healthy Checker</a></h1>
     </header>
     <main>
-        <section class="choseYourMethod">
+        <section id="choseYourMethod" class="choseYourMethod">
             <article class="scanCode">
-                <p>Scan Barcode</p>
+                <!-- <p>Scan Barcode</p> -->
+                <a href="#barcodeScannerSection">Scan Barcode</a>
             </article>
             <article class="fillInYourself"> 
-                <p>Fill In yourself
-                    </p>
+                <!-- <p>Fill In yourself</p> -->
+                <a href="#fillInYourselfSection">Scan Barcode</a>
                   
                 </article>
         </section>
-        <section class="hidden barCodeScannerSection">
+        <section id="barCodeScannerSection" class="hidden barCodeScannerSection">
             <div class="LoaderContainer">
             <div class="loader">
                </div>
@@ -35,7 +36,7 @@
             <!-- <p>Hieronder komt de url</p> -->
             <ul id="links"></ul>
         </section>
-        <section class="hidden fillInYourselfSection">
+        <section id="fillInYourselfSection" class="hidden fillInYourselfSection">
             <form action="#">
                 <label>Search product by barcode</label>
                 <input class="inputSearch" type="number" placeholder="9016209">
