@@ -1,4 +1,5 @@
 import { getMyData } from "./modules/getData.js"
+import { barCodeDetect } from "./modules/barcodeDetector.js"
 
   const barcodeBlock = document.querySelector(".scanCode")
   const fillInyourselfChose = document.querySelector(".fillInYourself")
@@ -14,34 +15,31 @@ import { getMyData } from "./modules/getData.js"
 
 
   async function detect() {
-    const barcodeDetector = new BarcodeDetector();
-    const list = document.getElementById("barcode-list");
-    let itemsFound = [];
-    const mediaStream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: "environment" }
-    });
+
+    barCodeDetect()
+    // const barcodeDetector = new BarcodeDetector();
+    // const list = document.getElementById("barcode-list");
+    // let itemsFound = [];
+    // const mediaStream = await navigator.mediaDevices.getUserMedia({
+    //   video: { facingMode: "environment" }
+    // });
   
-    const video = document.createElement("video");
-    video.srcObject = mediaStream;
-    video.autoplay = true;
+    // const video = document.createElement("video");
+    // video.srcObject = mediaStream;
+    // video.autoplay = true;
   
-    list.before(video);
+    // list.before(video);
 
 
     function render() {
       loadingElement.classList.add("hidden")
       barcodeDetector
         .detect(video)
-        // loadingElement.classList.add("hidden")
         .then((barcodes) => {
           barcodes.forEach((barcode) => {
-           // loadingElement.classList.add("hidden")
             if (!itemsFound.includes(barcode.rawValue)) {
               itemsFound.push(barcode.rawValue);
-              // const li = document.createElement("li");
-              // li.innerHTML = barcode.rawValue;
               const newBarcode = barcode.rawValue; 
-              // list.appendChild(li);
               const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json'
 
 
