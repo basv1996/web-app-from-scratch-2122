@@ -1,4 +1,4 @@
-export const barCodeDetect = () => {}
+export const barCodeDetect = () => {
 
 const barcodeDetector = new BarcodeDetector();
 const list = document.getElementById("barcode-list");
