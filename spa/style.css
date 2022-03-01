@@ -34,7 +34,7 @@ main section:first-child{
     align-items: center;
 }
 
-main section:first-child article {
+main section:first-child article a {
     box-shadow: 5px 5px 10px #000;
     padding: 1.5em;
     background-color: yellow;
