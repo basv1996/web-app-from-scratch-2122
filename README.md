@@ -1,13 +1,23 @@
 # Web App From Scratch 2122
 
-## App Interface
-![Interface van de app]()
+## Inhoudsopgave
+- [Interface](#App-Interface)
+- [Link naar de app](#Link-naar-de-app)
+- [De Opdracht](#De-Opdracht)
+- [User Story](#de-user-story--concept)
+- [API](#api-healthy-food-checker)
+- [Data](#-data)
+- [Rubric](#rubric)
 
-### Link naar de app
+# App Interface
+![Interface van de app](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/Interface.png)
+
+# Link naar de app
 :globe_with_meridians: [Link naar live app](https://basv1996.github.io/web-app-from-scratch-2122/spa/) 
 
 
-## De Opdracht
+
+# De Opdracht
 Design en bouw een Single Page App gebaseerd op een User Story.
 
 ### De User Story / Concept
@@ -25,7 +35,7 @@ Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even s
 Welke data heb ike gebruikt?
 
 Ik heb een API gebruikt van de Healthy Food Checker. Hierin staan duizenden voedingsproducten met hun voedingswaardes.  
-![Ruwe dataset]()
+![Ruwe dataset](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/RawData.png)
 
 
 ## Rubric
@@ -55,10 +65,6 @@ Author: [Bas Vugts](https://github.com/basv1996) , license by
 
 
 
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
 
 <!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
 
