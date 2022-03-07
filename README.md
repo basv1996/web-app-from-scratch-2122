@@ -8,6 +8,8 @@
 - [API](#api-healthy-food-checker)
 - [Data](#-data)
 - [Rubric](#rubric)
+- [Credits](#credits)
+- [License](#%EF%B8%8F-license)
 
 # App Interface
 ![Interface van de app](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/Interface.png)
@@ -20,6 +22,16 @@
 # De Opdracht
 Design en bouw een Single Page App gebaseerd op een User Story.
 
+### Feature lijst
+- [x] Barcode Scannen
+- [x] Krijg een product terug
+- [x] Zelf een barcode invullen
+
+
+### Nog toe te voegen
+- [x] bij het zelf invullen de product page terug krijgen
+
+
 ### De User Story / Concept
 
 Als foodie, wil ik tijdens het boodschappen doen een product kunnen scannen, 
@@ -31,8 +43,11 @@ Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even s
 
 ## Breakdown Schetsen
 
+## States & Flowchart
+![States & Flowchart](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/FlowChart_PSA_V1.0.jpg)
+
 ## 🗃 Data
-Welke data heb ike gebruikt?
+Welke data heb ik gebruikt?
 
 Ik heb een API gebruikt van de Healthy Food Checker. Hierin staan duizenden voedingsproducten met hun voedingswaardes.  
 ![Ruwe dataset](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/RawData.png)
