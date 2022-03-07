@@ -14,16 +14,16 @@ import { getMyData } from "./modules/getData.js"
 
 
 
-  let barcode = "3017620422003"; // <<< deze moet uit een barcode scan komen
-        let url = "https://world.openfoodfacts.org/api/v0/product/"+barcode+".json";
+  // let barcode = "3017620422003"; // <<< deze moet uit een barcode scan komen
+  //       let url = "https://world.openfoodfacts.org/api/v0/product/"+barcode+".json";
 
-        fetch(url).then(function(response) { 
-          return response.json()
-        }).then(function(json) { 
-          let data = json;
-          console.log(data)
+  //       fetch(url).then(function(response) { 
+  //         return response.json()
+  //       }).then(function(json) { 
+  //         let data = json;
+  //         console.log(data)
 
-        });
+  //       });
 
   //console.log('https://world.openfoodfacts.org/api/v0/product/' + 3017620422003 + '.json')
 
