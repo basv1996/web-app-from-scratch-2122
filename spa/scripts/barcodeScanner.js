@@ -14,7 +14,7 @@ import { loader } from "./modules/loader.js"
   const loadingElement = document.querySelector(".LoaderContainer")
 
   async function detect() {
-    loader();
+    
     const barcodeDetector = new BarcodeDetector();
     const list = document.getElementById("barcode-list");
     let itemsFound = [];
@@ -30,8 +30,8 @@ import { loader } from "./modules/loader.js"
 
 
     function render() {
- 
-     loader.classList.add("hidden");
+    loader();
+     loadingElement.classList.add("hidden");
       barcodeDetector
         .detect(video)
         .then((barcodes) => {
