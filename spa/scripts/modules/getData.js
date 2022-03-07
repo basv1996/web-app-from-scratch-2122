@@ -8,7 +8,7 @@ fetch(getURL)
                .then(response => {
                   console.log(response.product)
 
-                  //skeletonSection.innerHTML = ''
+                  skeletonSection.innerHTML = ''
           
                   const product = {
                       name: response.product.product_name,
@@ -31,7 +31,7 @@ fetch(getURL)
                          </h2>
                           <h3> Nutriments: </h3>
                             <p>kcal per 100gr:  ${product.kcal100gram}</p>
-                            <p>Total Carbohybrates per 100gr:  ${product.carbsPer100gram}</p>
+                            <p>Carbs per 100gr:  ${product.carbsPer100gram}</p>
                             <p class="toTheRight">sugars: ${product.sugarspercarbs}</p>
                             <p>Fat per 100gr:  ${product.fatPer100gram}</p> 
                             <p class="backToOriginal"><a href=".">Scan another code</a></p>      
@@ -40,6 +40,6 @@ fetch(getURL)
           
           document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
               })
-              .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
+              .catch(error => document.querySelector(".product").insertAdjacentHTML('beforebegin', error))
             
 }

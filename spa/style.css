@@ -2,28 +2,32 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: 'Oxygen', sans-serif;
+    box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
-    color: red;
+    color: #dc1E0B;
 }
 body header {
-    background-color: yellowgreen;
+    box-shadow: 20px 25px 5px black;
+    background-color: #70cc33;
     height: 5em;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 body header h1 {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Oxygen', sans-serif;
     color: #fff;
 }
 
 main section {
-	background-color: #a4fcbc;
+	background-color: #dafae3;
 	height: calc(100vh - 5em);
 	margin: 0 auto;
 }
@@ -34,13 +38,17 @@ main section:first-child{
     align-items: center;
 }
 
-main section:first-child article a {
-    box-shadow: 5px 5px 10px #000;
-    padding: 1.5em;
+main section:first-child article button 
+{
+    box-shadow: 3px 4px 6px #000;
+    padding: .5em 1.5em ;
     background-color: yellow;
-    border: 5px dotted red;
+    border: 2px solid grey;
     width: 20vw;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: 700;
+    color: rgb(24, 24, 24);
 }
 
 

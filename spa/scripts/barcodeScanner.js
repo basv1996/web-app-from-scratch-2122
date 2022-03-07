@@ -5,9 +5,9 @@ import { getMyData } from "./modules/getData.js"
   const choseYourMethod = document.querySelector(".choseYourMethod")
   const barCodeScannerSection = document.querySelector(".barCodeScannerSection")
   const fillInYourselfSection = document.querySelector(".fillInYourselfSection")
-  const scanOtherBar = document.querySelector(".scanOtherCode")
+  // const scanOtherBar = document.querySelector(".scanOtherCode")
   const backToOrigin = document.querySelector(".backToOriginal")
-  const searchBtn = document.querySelector("form input[type=submit]")
+  // const searchBtn = document.querySelector("form input[type=submit]")
   const form = document.querySelector("form")
   const skeletonSection = document.querySelector("section:first-of-type")
   const loadingElement = document.querySelector(".LoaderContainer")
@@ -53,7 +53,6 @@ import { getMyData } from "./modules/getData.js"
               </svg>
               </section>
               `
-              
               getMyData(video, getURL, loadingElement)
            
             }
