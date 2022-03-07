@@ -4,8 +4,11 @@
 - [Interface](#App-Interface)
 - [Link naar de app](#Link-naar-de-app)
 - [De Opdracht](#De-Opdracht)
+- [Feature lijst](#feature-lijst)
 - [User Story](#de-user-story--concept)
 - [API](#api-healthy-food-checker)
+- [States & Flowchart](#states--flowchart)
+- [Activity Digram]()
 - [Data](#-data)
 - [Rubric](#rubric)
 - [Credits](#credits)
@@ -29,7 +32,7 @@ Design en bouw een Single Page App gebaseerd op een User Story.
 
 
 ### Nog toe te voegen
-- [x] bij het zelf invullen de product page terug krijgen
+- [ ] bij het zelf invullen de product page terug krijgen
 
 
 ### De User Story / Concept
@@ -45,6 +48,8 @@ Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even s
 
 ## States & Flowchart
 ![States & Flowchart](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/FlowChart_PSA_V1.0.jpg)
+
+## Activity Digram
 
 ## 🗃 Data
 Welke data heb ik gebruikt?
