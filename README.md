@@ -7,9 +7,9 @@
 - [Feature lijst](#feature-lijst)
 - [User Story](#de-user-story--concept)
 - [API](#api-healthy-food-checker)
+- [Activity Digram](#Activity-Digram)
 - [States & Flowchart](#states--flowchart)
 - [Control Flow](#Control-flow)
-- [Activity Digram]()
 - [Data](#-data)
 - [Rubric](#rubric)
 - [Credits](#credits)
@@ -44,8 +44,7 @@ zodat ik meer informatie over het product kan lezen en een goede keuze kan maken
 ### API (Healthy Food Checker)
 Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even snel als je boodschappen doet of als je in een restaurant zit, of als je thuis een uitgebreid en gedetailleerd dieet plan wil opstellen? Ontwerp een website waarmee je dit kan doen. De Healthy Food Checker is gebaseerd op Open Food Facts een productendatabase over voedsel door iedereen en voor iedereen. Je kan er heel veel informatie vinden, maar ook aan bijdragen producten toe te voegen en/of teksten te verbeteren.
 
-
-## Breakdown Schetsen
+## Activity Digram
 
 ## States & Flowchart
 ![States & Flowchart](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/FlowChart_PSA_V1.0.jpg)
@@ -53,7 +52,6 @@ Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even s
 ## Control Flow
 ![Control Flow](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/ControlFlow_PSA_V1.0-02.jpg)
 
-## Activity Digram
 
 ## 🗃 Data
 Welke data heb ik gebruikt?
