@@ -11,7 +11,7 @@ a {
     color: #dc1E0B;
 }
 body header {
-    box-shadow: 20px 25px 5px black;
+    box-shadow: 2px 2px 15px black;
     position: relative;
     background-color: #70cc33;
     height: 5em;
