@@ -1,4 +1,5 @@
 import { getMyData } from "./modules/getData.js"
+import { loader } from "./modules/loader.js"
 
   const barcodeBlock = document.querySelector(".scanCode")
   const fillInyourselfChose = document.querySelector(".fillInYourself")
@@ -28,7 +29,8 @@ import { getMyData } from "./modules/getData.js"
 
 
     function render() {
-      loadingElement.classList.add("hidden")
+     loader();
+     loader.classList.add("hidden");
       barcodeDetector
         .detect(video)
         .then((barcodes) => {
