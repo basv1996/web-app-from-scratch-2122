@@ -12,6 +12,7 @@ a {
 }
 body header {
     box-shadow: 20px 25px 5px black;
+    position: relative;
     background-color: #70cc33;
     height: 5em;
     text-align: center;
@@ -30,6 +31,7 @@ main section {
 	background-color: #dafae3;
 	height: calc(100vh - 5em);
 	margin: 0 auto;
+	padding: 2em 0;
 }
 
 main section:first-child{
