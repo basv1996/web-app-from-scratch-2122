@@ -1,5 +1,4 @@
 import { getMyData } from "./modules/getData.js"
-import { loader } from "./modules/loader.js"
 
   const barcodeBlock = document.querySelector(".scanCode")
   const fillInyourselfChose = document.querySelector(".fillInYourself")
@@ -14,7 +13,6 @@ import { loader } from "./modules/loader.js"
   const loadingElement = document.querySelector(".LoaderContainer")
 
   async function detect() {
-    
     const barcodeDetector = new BarcodeDetector();
     const list = document.getElementById("barcode-list");
     let itemsFound = [];
@@ -30,8 +28,7 @@ import { loader } from "./modules/loader.js"
 
 
     function render() {
-     loader();
-     loadingElement.classList.add("hidden");
+      loadingElement.classList.add("hidden")
       barcodeDetector
         .detect(video)
         .then((barcodes) => {
