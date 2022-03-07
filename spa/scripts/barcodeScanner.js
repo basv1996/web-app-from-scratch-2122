@@ -36,7 +36,7 @@ import { getMyData } from "./modules/getData.js"
             if (!itemsFound.includes(barcode.rawValue)) {
               itemsFound.push(barcode.rawValue);
               const newBarcode = barcode.rawValue; 
-              const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json'
+              const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json';
               
               skeletonSection.innerHTML = `
               <section>
