@@ -18,6 +18,8 @@ fetch(getURL)
                       sugarspercarbs: response.product.nutriments['sugars_100g'],
                       fatPer100gram: response.product.nutriments['fat_100g'],
                       proteinsPer100gram: response.product.nutriments['proteins_100g'],
+                      novaGroup: response.product.nutriments['nova-group'],
+                      nutriScore: response.product.nutriscore_grade,
                                           
                       nutriments: response.product.nutriments,
                       img: response.product.image_front_url
@@ -29,6 +31,8 @@ fetch(getURL)
                         <h2>
                            <b>Name:</b> ${product.name} 
                          </h2>
+                         <p>Nova group: ${product.novaGroup}</p>
+                         <p>Nutri Score: ${product.nutriScore} </p>
                           <h3> Nutriments: </h3>
                             <p>kcal per 100gr:  ${product.kcal100gram}</p>
                             <p>Carbs per 100gr:  ${product.carbsPer100gram}</p>

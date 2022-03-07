@@ -28,10 +28,16 @@ Ik heb een API gebruikt van de Healthy Food Checker. Hierin staan duizenden voed
 ![Ruwe dataset]()
 
 
+## Rubric
 
-### Rubric
+Your efforts will be graded using a single point rubric (see below). You will have to pass the criterion (centre column) to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
 
-[Rubric](h)
+| Deficiency | Criterion | Improvement |
+|:--|:--|:--|
+|  | *User Interface* - you design, build and test the user interface by applying interface design principles |  |
+|  | *Code structure* - you write modular, consistent and efficient HTML, CSS and JavaScript code by applying structure and best practices. You manage state for the application and the UI |  |
+|  | *Data management* - you understand how you can work with an external API using asynchronous code. You can retrieve data, manipulate and dynamically convert it to structured html |  |
+|  | *Project* - your app is working and published on GitHub Pages. Your project is thoroughly documented in the `README.md` file in your repository.  |  |
 
 ### Credits
 -  [Minor Webdevelopment](https://github.com/cmda-tt/course-21-22) 
@@ -48,16 +54,7 @@ Author: [Bas Vugts](https://github.com/basv1996) , license by
 
 
 
-## Rubric
 
-Your efforts will be graded using a single point rubric (see below). You will have to pass the criterion (centre column) to pass the course. During the test you will be consulted and will be given feedback on things we think deficient and things we think are an improvement on the criterion.
-
-| Deficiency | Criterion | Improvement |
-|:--|:--|:--|
-|  | *User Interface* - you design, build and test the user interface by applying interface design principles |  |
-|  | *Code structure* - you write modular, consistent and efficient HTML, CSS and JavaScript code by applying structure and best practices. You manage state for the application and the UI |  |
-|  | *Data management* - you understand how you can work with an external API using asynchronous code. You can retrieve data, manipulate and dynamically convert it to structured html |  |
-|  | *Project* - your app is working and published on GitHub Pages. Your project is thoroughly documented in the `README.md` file in your repository.  |  |
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
