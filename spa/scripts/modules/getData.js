@@ -18,9 +18,7 @@ fetch(getURL)
                       sugarspercarbs: response.product.nutriments['sugars_100g'],
                       fatPer100gram: response.product.nutriments['fat_100g'],
                       proteinsPer100gram: response.product.nutriments['proteins_100g'],
-                      // novaGroup: response.product.nutriments['nova-group'],
-                      // nutriScore: response.product.nutriscore_grade,
-                                          
+                                                            
                       nutriments: response.product.nutriments,
                       img: response.product.image_front_url
                   }

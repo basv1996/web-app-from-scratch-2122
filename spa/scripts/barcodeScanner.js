@@ -12,22 +12,6 @@ import { getMyData } from "./modules/getData.js"
   const skeletonSection = document.querySelector("section:first-of-type")
   const loadingElement = document.querySelector(".LoaderContainer")
 
-
-
-  // let barcode = "3017620422003"; // <<< deze moet uit een barcode scan komen
-  //       let url = "https://world.openfoodfacts.org/api/v0/product/"+barcode+".json";
-
-  //       fetch(url).then(function(response) { 
-  //         return response.json()
-  //       }).then(function(json) { 
-  //         let data = json;
-  //         console.log(data)
-
-  //       });
-
-  //console.log('https://world.openfoodfacts.org/api/v0/product/' + 3017620422003 + '.json')
-
-
   async function detect() {
     const barcodeDetector = new BarcodeDetector();
     const list = document.getElementById("barcode-list");
@@ -54,8 +38,6 @@ import { getMyData } from "./modules/getData.js"
               const newBarcode = barcode.rawValue; 
               const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json'
               
-
-
               skeletonSection.innerHTML = `
               <section>
               <svg width='100%' height='90vh' class="skeletor">
