@@ -8,7 +8,7 @@ fetch(getURL)
                .then(response => {
                   console.log(response.product)
 
-                  // skeletonSection.innerHTML = ''
+                  skeletonSection.innerHTML = ''
           
                   const product = {
                       name: response.product.product_name,
