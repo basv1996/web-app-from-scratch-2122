@@ -40,6 +40,6 @@ fetch(getURL)
           
           document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
               })
-              .catch(error => document.querySelector(".product").insertAdjacentHTML('beforebegin', error))
+              .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
             
 }
