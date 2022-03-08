@@ -72,8 +72,7 @@ import { loader } from "./modules/loading.js"
             }
           });
         })
-        // .catch(console.error);
-        .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
+        .catch(console.error);
     }
 
 // barcode getter
