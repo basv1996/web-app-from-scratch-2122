@@ -40,7 +40,7 @@ import { loader } from "./modules/loading.js"
               const newBarcode = barcode.rawValue; 
               const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json';
               
-              skeletonSection.innerHTML = `
+              skeletonSection.insertAdjacentHTML("afterbegin", `
               <section>
               <svg width='100%' height='90vh' class="skeletor">
                            <rect width='100%' height='30vh' />
@@ -52,7 +52,7 @@ import { loader } from "./modules/loading.js"
                            <rect transform='translate(20, 530)' width='25%' height='1em' />
               </svg>
               </section>
-              `
+              `)
 
               getMyData(video, getURL, loadingElement)
            

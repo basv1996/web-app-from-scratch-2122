@@ -43,7 +43,8 @@ fetch(getURL)
                       </div>
                   `;
           
-          document.querySelector("main section:nth-of-type(2)").innerHTML = markup; 
+          const content = document.querySelector("main section:nth-of-type(2)");
+          content = markup;
           const main = document.querySelector("main");  
               })
               .catch(error => main.insertAdjacentHTML('beforebegin', errorMsg))
