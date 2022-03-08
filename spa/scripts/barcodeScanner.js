@@ -29,7 +29,7 @@ import { loader } from "./modules/loading.js"
 
 
     function render() {
-      //loader
+      loader
       loadingElement.classList.add("hidden")
       barcodeDetector
         .detect(video)
