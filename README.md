@@ -50,7 +50,7 @@ Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even s
 ![States & Flowchart](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/FlowChart_PSA_V1.0.jpg)
 
 ## Control Flow
-![Control Flow](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/ControlFlow_PSA_V1.0-02.jpg)
+![Control Flow](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/ControlFlow_PSA_V1.0-02-02.jpg)
 
 
 ## 🗃 Data
