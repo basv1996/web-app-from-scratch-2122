@@ -1,4 +1,4 @@
-import { errorMsg } from "./error.js"
+import * as errorMsg from "./error.js"
 export const getMyData = (video, getURL, loadingElement) =>{
 
 fetch(getURL)
