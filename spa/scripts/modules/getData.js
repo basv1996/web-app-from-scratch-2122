@@ -44,7 +44,9 @@ fetch(getURL)
           
         
                   const theMain = document.querySelector("main section:nth-of-type(2)");
+                  const videoEL = document.querySelector("main section:nth-of-type(2) video")
                   theMain.insertAdjacentHTML("afterbegin", markup);
+                  videoEL.remove()
                  // document.querySelector("main section:nth-of-type(2)").innerHTML = markup;      
                 })
                 .catch(error => document.querySelector("main").insertAdjacentHTML('afterbegin', error))
