@@ -40,7 +40,8 @@ main section:first-child{
     align-items: center;
 }
 
-main section:first-child article button 
+main section:first-child article button,
+.backToOriginal 
 {
     box-shadow: 3px 4px 6px #000;
     padding: .5em 1.5em ;
@@ -78,15 +79,21 @@ video::after {
     max-width: 100%;
 }
 
-.backToOriginal {
+/* .backToOriginal {
     border: 4px dotted blue;
     padding: 1em;
     cursor: pointer;
     margin: 1em 0 0 0;
-}
+} */
 
 .hidden {
     display: none!important;
+}
+
+.fillInYourselfSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .fillInYourselfSection form {
@@ -98,6 +105,10 @@ video::after {
 
 .fillInYourselfSection form > * {
 	margin: 1em 0;
+}
+
+.fillInYourselfSection .backToOriginal {
+	width: 170px;
 }
 
 .LoaderContainer {

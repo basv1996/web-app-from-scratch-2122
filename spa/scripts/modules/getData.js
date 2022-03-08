@@ -1,3 +1,4 @@
+import { errorMsg } from "./error"
 export const getMyData = (video, getURL, loadingElement) =>{
 
 fetch(getURL)
@@ -42,8 +43,9 @@ fetch(getURL)
                       </div>
                   `;
           
-          document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
+          document.querySelector("main section:nth-of-type(2)").innerHTML = markup; 
+          const main = document.querySelector("main");  
               })
-              .catch(error => document.body.insertAdjacentHTML('beforebegin', error))
+              .catch(error => main.insertAdjacentHTML('beforebegin', errorMsg))
             
 }
