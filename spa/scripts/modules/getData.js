@@ -25,6 +25,7 @@ fetch(getURL)
                       nutriments: response.product.nutriments,
                       img: response.product.image_front_url
                   }
+
           
                   const markup = `
                     <div class="product">
@@ -32,8 +33,6 @@ fetch(getURL)
                         <h2>
                            <b>Name:</b> ${product.name} 
                          </h2>
-                         <p>nutri score: ${product.nutriScore}</p>
-                         <p>nova group: ${product.novaGroup}</p>
                           <h3> Nutriments: </h3>
                             <p>kcal per 100gr:  ${product.kcal100gram}</p>
                             <p>Total Carbohybrates per 100gr:  ${product.carbsPer100gram}</p>
