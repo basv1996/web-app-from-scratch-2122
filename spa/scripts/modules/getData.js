@@ -43,7 +43,9 @@ fetch(getURL)
                   `;
           
         
-                  document.querySelector("main section:nth-of-type(2)").innerHTML = markup;    
+                  const theMain = document.querySelector("main section:nth-of-type(2)");
+                  theMain.insertAdjacentHTML("afterbegin", markup);
+                 // document.querySelector("main section:nth-of-type(2)").innerHTML = markup;      
                 })
                 .catch(error => document.querySelector("main").insertAdjacentHTML('afterbegin', error))
               
