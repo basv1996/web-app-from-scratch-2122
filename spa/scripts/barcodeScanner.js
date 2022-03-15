@@ -17,22 +17,21 @@ import { handleRoutes } from "./modules/router.js";
   const loadingElement = document.querySelector(".LoaderContainer")
 
 
-  window.addEventListener('hashchange', function() {
-    if(window.location.hash == '#barcodeScanner') {
-      console.log("helo there nummero 1")
-    } else if(window.location.hash == '#formBarcode') {
-      console.log("hello there formuliertje")
-    }  else if(window.location.hash == '') {
-      console.log("hello there no hash")
-    }
-    else {
-      console.log("nothing to see here");
-    }
-  });
+  // window.addEventListener('hashchange', function() {
+  //   if(window.location.hash == '#barcodeScanner') {
+  //     console.log("helo there nummero 1")
+  //   } else if(window.location.hash == '#formBarcode') {
+  //     console.log("hello there formuliertje")
+  //   }  else if(window.location.hash == '') {
+  //     console.log("hello there no hash")
+  //   }
+  //   else {
+  //     console.log("nothing to see here");
+  //   }
+  // });
 
-  window.addEventListener('hashchange', handleRoutes())
+  // window.addEventListener('hashchange', handleRoutes())
 
-// handleRoutes();
   
   async function detect() {
     const barcodeDetector = new BarcodeDetector();

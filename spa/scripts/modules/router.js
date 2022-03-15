@@ -1,8 +1,7 @@
 import "./vendor/routie.min.js";
 
 export function handleRoutes() {
-    routie(
-        {
+    routie({
             '': () => {
                 console.log("chose method");
 
