@@ -2,6 +2,7 @@ import { getMyData } from "./modules/getData.js"
 import { loader } from "./modules/loading.js"
 import "./modules/vendor/routie.min.js";
 import { skeletor } from "./modules/skeleton.js";
+import { handleRoutes } from "./modules/router.js";
 
   const barcodeBlock = document.querySelector(".scanCode")
   const fillInyourselfChose = document.querySelector(".fillInYourself")
@@ -15,6 +16,24 @@ import { skeletor } from "./modules/skeleton.js";
   const skeletonSection = document.querySelector("section:first-of-type")
   const loadingElement = document.querySelector(".LoaderContainer")
 
+
+  window.addEventListener('hashchange', function() {
+    if(window.location.hash == '#barcodeScanner') {
+      console.log("helo there nummero 1")
+    } else if(window.location.hash == '#formBarcode') {
+      console.log("hello there formuliertje")
+    }  else if(window.location.hash == '') {
+      console.log("hello there no hash")
+    }
+    else {
+      console.log("nothing to see here");
+    }
+  });
+
+  window.addEventListener('hashchange', handleRoutes())
+
+// handleRoutes();
+  
   async function detect() {
     const barcodeDetector = new BarcodeDetector();
     const list = document.getElementById("barcode-list");
@@ -43,33 +62,6 @@ import { skeletor } from "./modules/skeleton.js";
               const getURL = 'https://world.openfoodfacts.org/api/v0/product/' + newBarcode + '.json';
               
               skeletonSection.insertAdjacentHTML("afterbegin", skeletor);
-              
-              // skeletonSection.insertAdjacentHTML("afterbegin", `
-              // <section>
-              // <svg width='100%' height='90vh' class="skeletor">
-              //              <rect width='100%' height='30vh' />
-              //              <rect transform='translate(20, 375)' width='30%' height='2em' />
-              //              <rect transform='translate(20, 440)' width='30%' height='1.5em' />
-              //              <rect transform='translate(20, 470)' width='25%' height='1em' />
-              //              <rect transform='translate(20, 490)' width='25%' height='1em' />
-              //              <rect transform='translate(20, 510)' width='25%' height='1em' />
-              //              <rect transform='translate(20, 530)' width='25%' height='1em' />
-              // </svg>
-              // </section>
-              // `)
-              // skeletonSection.innerHTML = `
-              // <section>
-              // <svg width='100%' height='90vh' class="skeletor">
-              //              <rect width='100%' height='30vh' />
-              //              <rect transform='translate(20, 375)' width='30%' height='2em' />
-              //              <rect transform='translate(20, 440)' width='30%' height='1.5em' />
-              //              <rect transform='translate(20, 470)' width='25%' height='1em' />
-              //              <rect transform='translate(20, 490)' width='25%' height='1em' />
-              //              <rect transform='translate(20, 510)' width='25%' height='1em' />
-              //              <rect transform='translate(20, 530)' width='25%' height='1em' />
-              // </svg>
-              // </section>
-              // `
 
               getMyData(video, getURL, loadingElement)
            
@@ -100,11 +92,13 @@ import { skeletor } from "./modules/skeleton.js";
     detect();
     choseYourMethod.classList.toggle("hidden")
     barCodeScannerSection.classList.toggle("hidden")
+    window.location.hash = '#barcodeScanner';
   })
 
   fillInyourselfChose.addEventListener("click", () => {
     choseYourMethod.classList.toggle("hidden")
     fillInYourselfSection.classList.toggle("hidden")
+    window.location.hash = '#formBarcode';
   })
 
   backToOrigin.addEventListener("click", () => {

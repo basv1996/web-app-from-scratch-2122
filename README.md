@@ -7,8 +7,9 @@
 - [Feature lijst](#feature-lijst)
 - [User Story](#de-user-story--concept)
 - [API](#api-healthy-food-checker)
-- [Activity Digram](#Activity-Digram)
-- [States & Flowchart](#states--flowchart)
+- [Activity Digram](#Activity-Digram-Versie-1.0)
+- [States & Flowchart](#states--flowchart-Versie-1.0)
+- [Activity Diagram Versie 2.0](#Activity-Diagram-Versie-2.0)
 - [Control Flow](#Control-flow)
 - [Data](#-data)
 - [Rubric](#rubric)
@@ -46,11 +47,16 @@ Met behulp van de Healthy Food Checker kun je betere voedselkeuzes maken. Even s
 
 ## Activity Digram
 
-## States & Flowchart
+## States & Flowchart Versie 1.0
 ![States & Flowchart](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/FlowChart_PSA_V1.0.jpg)
 
-## Control Flow
+## Control Flow Versie 1.0
 ![Control Flow](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/ControlFlow_PSA_V1.0-02-02.jpg)
+
+
+## Activity Diagram Versie 2.0
+![Activity Diagram V 2.0](https://raw.githubusercontent.com/basv1996/web-app-from-scratch-2122/main/spa/img/FlowChart_PSA_V1.1.jpg)
+
 
 
 ## 🗃 Data

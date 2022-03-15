@@ -1,18 +1,27 @@
+import "./vendor/routie.min.js";
+
 export function handleRoutes() {
     routie(
         {
-            'choseYourMethod': () => {
+            '': () => {
+                console.log("chose method");
 
             }
         },
         {
-            'barcodeScannerSection': () => {
+            'barcodeScanner': () => {
+                console.log("barcode scanner section");
 
+            }
+        },
+        {
+            'barcodeScanner/:id': () => {
+                console.log("fill in yourself");
             }
         },
         {
             'fillInYourselfSection': () => {
-
+                console.log("fill in yourself");
             }
         },
 
