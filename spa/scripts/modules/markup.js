@@ -1,4 +1,4 @@
-import { product } from "./product.js";
+import { product } from "./renderProduct.js";
 
 export const markup = `
 <div class="product">

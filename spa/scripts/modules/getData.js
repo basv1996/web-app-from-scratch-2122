@@ -1,5 +1,5 @@
 import * as errorMsg from "./error.js";
-import { product } from "./product.js";
+import { product } from "./renderProduct.js";
 import { markup } from "./markup.js";
 
 export const getMyData = (video, getURL, loadingElement) =>{
@@ -13,9 +13,9 @@ fetch(getURL)
                   markup();
 
                   const theMain = document.querySelector("main section:nth-of-type(2)");
-                  const videoEL = document.querySelector("main section:nth-of-type(2) video")
+                  //const videoEL = document.querySelector("main section:nth-of-type(2) video")
                   theMain.insertAdjacentHTML("afterbegin", markup);
-                  videoEL.remove()
+                  video.remove()
                 })
                 .catch(error => document.querySelector("main").insertAdjacentHTML('afterbegin', error))
               
