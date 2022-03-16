@@ -2,12 +2,13 @@ import * as errorMsg from "./error.js";
 import { product } from "./renderProduct.js";
 import { markup } from "./markup.js";
 
+
 export const getMyData = (video, getURL, loadingElement) =>{
 
+   const URL = 'https://world.openfoodfacts.org/api/v0/product/' + '3052910013677' + '.json';
 fetch(getURL)
               .then(response => response.json())
                .then(response => {
-                  document.querySelector("main").insertAdjacentHTML('afterbegin', response.product);
                   console.log(response.product)
                      //skeletonSection.innerHTML = ''
                   product();
@@ -18,5 +19,4 @@ fetch(getURL)
                   videoEL.remove()
                 })
                 .catch(error => document.querySelector("main").insertAdjacentHTML('afterbegin', error))
-              
   }
