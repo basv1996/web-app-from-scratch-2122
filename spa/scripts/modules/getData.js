@@ -4,11 +4,11 @@ import { markup } from "./markup.js";
 
 
 export const getMyData = (video, getURL, loadingElement) =>{
+   
 
-   const URL = 'https://world.openfoodfacts.org/api/v0/product/' + '3052910013677' + '.json';
-fetch(URL)
-              .then(response => response.json())
-               .then(response => {
+fetch(getURL)
+            .then(response => response.json())
+            .then(response => {
                   console.log(response.product)
                      //skeletonSection.innerHTML = ''
                   product();
@@ -17,6 +17,6 @@ fetch(URL)
                   const videoEL = document.querySelector("main section:nth-of-type(2) video")
                   theMain.insertAdjacentHTML("afterbegin", markup);
                   videoEL.remove()
-                })
-                .catch(error => document.querySelector("main").insertAdjacentHTML('afterbegin', error))
+            })
+            .catch(error => document.querySelector("main").insertAdjacentHTML('afterbegin', error))
   }

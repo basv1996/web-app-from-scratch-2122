@@ -48,7 +48,7 @@ import { handleRoutes } from "./modules/router.js";
     list.before(video);
 
 
-  function render() {
+    function render() {
       //loader
       loadingElement.classList.add("hidden")
       barcodeDetector
