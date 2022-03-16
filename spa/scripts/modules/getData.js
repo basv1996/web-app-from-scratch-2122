@@ -7,6 +7,7 @@ export const getMyData = (video, getURL, loadingElement) =>{
 fetch(getURL)
               .then(response => response.json())
                .then(response => {
+                  document.querySelector("main").insertAdjacentHTML('afterbegin', response.product);
                   console.log(response.product)
                      //skeletonSection.innerHTML = ''
                   product();
