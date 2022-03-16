@@ -6,7 +6,7 @@ import { markup } from "./markup.js";
 export const getMyData = (video, getURL, loadingElement) =>{
 
    const URL = 'https://world.openfoodfacts.org/api/v0/product/' + '3052910013677' + '.json';
-fetch(getURL)
+fetch(URL)
               .then(response => response.json())
                .then(response => {
                   console.log(response.product)
