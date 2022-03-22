@@ -10,7 +10,7 @@ fetch(getURL)
             .then(response => {
                   console.log(response.product)
                      //skeletonSection.innerHTML = ''
-                  product(response.product);
+                  product(response);
                   //markup();
                   // const theMain = document.querySelector("main section:nth-of-type(2)");
                   //const videoEL = document.querySelector("main section:nth-of-type(2) video")
