@@ -12,9 +12,9 @@ fetch(getURL)
                      //skeletonSection.innerHTML = ''
                   product(response.product);
                   //markup();
-                  const theMain = document.querySelector("main section:nth-of-type(2)");
+                  // const theMain = document.querySelector("main section:nth-of-type(2)");
                   //const videoEL = document.querySelector("main section:nth-of-type(2) video")
-                  theMain.insertAdjacentHTML("afterbegin", markup);
+                  //theMain.insertAdjacentHTML("afterbegin", markup);
                   video.remove()
             })
             .catch(error => document.querySelector("main").insertAdjacentHTML('afterbegin', error))

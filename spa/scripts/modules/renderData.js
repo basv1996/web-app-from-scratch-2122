@@ -14,6 +14,8 @@ export const product = (response) => {
         img: response.product.image_front_url
         }
 
+        const mainEl = document.querySelector("main section:nth-of-type(2)");
+
         const markup = `
 <div class="product">
   <img src=${product.img}>
@@ -28,6 +30,8 @@ export const product = (response) => {
         <p class="backToOriginal"><a href=".">Scan another code</a></p>      
   </div>
   `
+
+  mainEl.insertAdjacentHTML('beforeend', markup)
     }
 
 
